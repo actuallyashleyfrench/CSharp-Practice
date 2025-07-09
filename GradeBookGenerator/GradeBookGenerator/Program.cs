@@ -60,6 +60,13 @@ namespace GradeBook
             }
         }
 
+
+
+        /*
+         * Reads user input for student name and validates it
+         * Prompts user until valid name is entered
+         * Returns valid name string
+         */
         static string GetValidName()
         {
             string inputName;
@@ -72,7 +79,11 @@ namespace GradeBook
             return inputName;
         }
 
-
+        /*
+         * Reads user input for student grade and validates it
+         * Prompts user until valid grade is entered
+         * Returns valid grade double
+         */
         static double GetValidGrade()
         {
             double inputGrade;
@@ -85,6 +96,7 @@ namespace GradeBook
             } while(!isValid);
             return inputGrade;
         }
+
 
         /*
          * Groups students by letter grade
@@ -192,10 +204,12 @@ namespace GradeBook
             // Get name and grade for each student 
             for (int i = 0; i < numOfStudents; i++)
             {
+                // Get students' names
                 students[i] = new Student();
                 Console.Write("Enter student's name: ");
                 students[i].Name = GetValidName();
 
+                // Get students' grades
                 Console.Write("Enter student's grade: ");
                 students[i].Grade = GetValidGrade();
             }

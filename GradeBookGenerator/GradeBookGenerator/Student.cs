@@ -10,7 +10,7 @@ namespace GradeBook
      * Represents a studen with a name, numeric grade, and letter grade equivalent
      * 
      */
-    public class Student
+    internal class Student
     {
         public string Name { get; set; }
         public double Grade { get; set; }
